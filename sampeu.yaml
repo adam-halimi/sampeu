@@ -1,0 +1,92 @@
+services:
+  demo:
+  tms:
+    use_grid_names: true
+    # origin for /tiles service
+    origin: 'nw'
+  kml:
+      use_grid_names: true
+  wmts:
+    # use restful access to WMTS
+    restful: true
+    # this is the default template for MapProxy
+    restful_template: '/{Layer}/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.{Format}'
+    # and also allow KVP requests
+    kvp: true
+    md:
+      # metadata used in capabilities documents for WMTS
+      # if the md option is not set, the metadata of the WMS will be used
+      title: Sampeu Base
+      abstract: Base data provider for peuyeum geospatial framework
+      online_resource: http://www.peuyeum.com/
+      contact:
+        person: Rolly Maulana Awangga
+        position: Software Engineer
+        organization: Peuyeum
+        address: Cibeunying
+        city: Bandung
+        postcode: 40191
+        country: Indonesia
+        phone: +62(0)813-12000-300
+        fax: +62(0)813-12000-300
+        email: rolly@awang.ga
+      # multiline strings are possible with the right indention
+      access_constraints:
+        This service is intended for Peuyeum Geospatial Framework.
+        The data is under development on peuyeum.com.
+        (http://www.peuyeum.com/)
+      fees: 'None'
+  wms:
+    md:
+      title: Peuyeum WMS
+      abstract: Peuyeum WMS Web Service.
+
+layers:
+  - name: sampeu
+    title: Sampeu Base Geo Map - www.awangga.net
+    sources: [sampeu_cache]
+  - name: ketan
+    title: Ketan Base Geo Map - www.awangga.net
+    sources: [ketan_cache]
+
+caches:
+  sampeu_cache:
+    grids: [ragi]
+    sources: [sampeu_source]
+  ketan_cache:
+    grids: [ragi]
+    sources: [ketan_source]
+    
+sources:
+  sampeu_source:
+    type: mapserver
+    req:
+      layers: roads
+      map: ./mapdata/mapfile/indo.map
+      transparent: true
+    coverage:
+      bbox: [94.5011475, -11.007385, 141.01947, 6.076721]
+      srs: 'EPSG:4326'
+    mapserver:
+      binary: /usr/libexec/mapserver
+      working_dir: ./mapdata/tmp
+    supported_srs: ['EPSG:4326']
+  ketan_source:
+      type: mapserver
+      req:
+        layers: roads
+        map: ./mapdata/mapfile/bdg.map
+        transparent: true
+      coverage:
+        bbox: [107.539814, -6.964109, 107.745121, -6.834932]
+        srs: 'EPSG:4326'
+      mapserver:
+        binary: /usr/libexec/mapserver
+        working_dir: ./mapdata/tmp
+      supported_srs: ['EPSG:4326']
+grids:
+    ragi:
+        base: GLOBAL_WEBMERCATOR
+
+globals:
+
