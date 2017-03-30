@@ -68,7 +68,7 @@ sources:
       bbox: [94.5011475, -11.007385, 141.01947, 6.076721]
       srs: 'EPSG:4326'
     mapserver:
-      binary: /usr/libexec/mapserver
+      binary: /usr/lib/cgi-bin/mapserv
       working_dir: ./mapdata/tmp
     supported_srs: ['EPSG:4326']
   ketan_source:
@@ -81,7 +81,7 @@ sources:
         bbox: [107.539814, -6.964109, 107.745121, -6.834932]
         srs: 'EPSG:4326'
       mapserver:
-        binary: /usr/libexec/mapserver
+        binary: /usr/lib/cgi-bin/mapserv
         working_dir: ./mapdata/tmp
       supported_srs: ['EPSG:4326']
 grids:
