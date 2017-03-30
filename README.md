@@ -17,3 +17,13 @@ source sampeuenv/bin/activate
 deactivate
 
 
+#### Nginx
+server {
+    listen 80;
+    server_name map.vas.web.id;
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/var/www/awangga/sampeu.sock;
+    }
+}
