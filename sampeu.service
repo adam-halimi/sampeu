@@ -2,8 +2,8 @@
 Description=uWSGI instance to serve sampeu
 
 [Service]
-ExecStartPre=/bin/bash -c 'mkdir -p /run/uwsgi; chown awangga:www-data /run/uwsgi'
-ExecStart=/usr/local/bin/bash -c 'cd /var/www/awangga/sampeu; source sampeuenv/bin/activate; uwsgi --ini sampeu.ini'
+ExecStartPre=/bin/bash -c 'mkdir -p /var/www/awangga/run/uwsgi; chown awangga:awangga /var/www/awangga/run/uwsgi'
+ExecStart=/bin/bash -c 'cd /var/www/awangga/sampeu; source sampeuenv/bin/activate; uwsgi --ini sampeu.ini'
 
 [Install]
 WantedBy=multi-user.target

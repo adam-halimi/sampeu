@@ -11,10 +11,7 @@ apt-get install libpcre3 libpcre3-dev
 pip install virtualenv
 pip install uwsgi
 
-virtualenv sampeuenv
-/bin/bash
-source sampeuenv/bin/activate
-deactivate
+
 
 
 #### Nginx
@@ -27,3 +24,11 @@ server {
         uwsgi_pass      unix:/var/www/awangga/sampeu.sock;
     }
 }
+
+#### Make it as service
+virtualenv sampeuenv
+/bin/bash
+source sampeuenv/bin/activate
+deactivate
+
+edit sampeu.service
