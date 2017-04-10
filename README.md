@@ -10,7 +10,7 @@ Location on :
 apt-get install libpcre3 libpcre3-dev
 pip install virtualenv
 pip install uwsgi
-
+pip install MyMapProxy
 
 
 
@@ -32,3 +32,5 @@ source sampeuenv/bin/activate
 deactivate
 
 edit sampeu.service
+
+cp sampeu.service /etc/systemd/system/

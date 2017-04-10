@@ -12,7 +12,7 @@ map
     imagepath "/var/www/html/tmp/"
     imageurl "/tmp/"
     metadata
-      wms_title "Awangga Geo Map"
+      wms_title "Awangga Sampeu Map"
       wms_srs "EPSG:4326"
       wms_enable_request "*"
     end
@@ -624,7 +624,7 @@ map
     LABELITEM "KABKOT"
     CLASS
       #minscale 10000
-      maxscale 1500000
+      maxscale 1000000
       Name "indonesia_kab"
       STYLE
         COLOR 102 255 102
