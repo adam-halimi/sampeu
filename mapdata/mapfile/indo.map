@@ -52,7 +52,7 @@ map
 
   layer #provinsi layer
     name provinsi
-	minscale 1000000
+	minscale 50000
     group roads
     type POLYGON
     dump true 
