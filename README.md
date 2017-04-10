@@ -34,3 +34,17 @@ deactivate
 edit sampeu.service
 
 cp sampeu.service /etc/systemd/system/
+
+## Editing Mapdata
+### Edit Atribut in dbf
+by using dbfpy. try it with python cli
+```sh
+from dbfpy import dbf
+db = dbf.Dbf("00.dbf")
+db[23]
+rec = db[23]
+rec['PROVINSI']= 'ACEH'
+rec.store()
+del rec
+db.close()
+```
