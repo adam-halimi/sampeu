@@ -623,7 +623,7 @@ map
     LABELCACHE ON
     LABELITEM "KABKOT"
     CLASS
-      minscale 750000
+      #minscale 750000
       maxscale 1500000
       Name "indonesia_kab"
       STYLE
