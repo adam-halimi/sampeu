@@ -52,8 +52,8 @@ map
 
   layer #provinsi layer
     name provinsi
-	minscale 500000
-    group roads
+	#minscale 500000
+    group petaindo
     type POLYGON
     dump true 
     projection
@@ -211,7 +211,7 @@ map
     class 
       expression "KEPULAUAN RIAU"
       style
-        color 153 255 204
+        color 204 153 0
       end
       label
         color  0 0 0
@@ -614,7 +614,7 @@ map
   #layer kabkot indonesia
   LAYER
     NAME base_map
-	group roads
+	group petaindo
     TYPE POLYGON
     STATUS ON
     DATA "00"
@@ -624,10 +624,10 @@ map
     LABELITEM "KABKOT"
     CLASS
       #minscale 750000
-      maxscale 1500000
+      maxscale 5000000
       Name "indonesia_kab"
       STYLE
-        COLOR 102 255 102
+        #COLOR 102 255 102
         OUTLINECOLOR 0 0 0
         SYMBOL 0
       END

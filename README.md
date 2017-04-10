@@ -48,3 +48,8 @@ rec.store()
 del rec
 db.close()
 ```
+### Mapfile RUles
+ layer near end of file of mapfile it is show on the top of map
+ minscale : showing layer at this min scale (Bigger Number, smaller map)
+ maxscale : showing layer at this max scale (Bigger Number, smaller map)
+ it is a range to show layer between maxscale and minscale

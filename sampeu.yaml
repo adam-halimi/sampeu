@@ -61,7 +61,7 @@ sources:
   sampeu_source:
     type: mapserver
     req:
-      layers: roads
+      layers: petaindo
       map: ./mapdata/mapfile/indo.map
       transparent: true
     coverage:
@@ -74,7 +74,7 @@ sources:
   ketan_source:
       type: mapserver
       req:
-        layers: roads
+        layers: petaindo
         map: ./mapdata/mapfile/bdg.map
         transparent: true
       coverage:
