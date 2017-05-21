@@ -45,17 +45,11 @@ layers:
   - name: sampeu
     title: Sampeu Base Geo Map - www.awangga.net
     sources: [sampeu_cache]
-  - name: ketan
-    title: Ketan Base Geo Map - www.awangga.net
-    sources: [ketan_cache]
 
 caches:
   sampeu_cache:
     grids: [ragi]
     sources: [sampeu_source]
-  ketan_cache:
-    grids: [ragi]
-    sources: [ketan_source]
     
 sources:
   sampeu_source:
@@ -68,25 +62,12 @@ sources:
       bbox: [94.5011475, -11.007385, 141.01947, 6.076721]
       srs: 'EPSG:4326'
     mapserver:
-      #for ubuntu 
-      #binary: /usr/lib/cgi-bin/mapserv
-      #for mac os install via homebrew
+      # for ubuntu 
+      # binary: /usr/lib/cgi-bin/mapserv
+      # for mac os install via homebrew
       binary: /usr/local/opt/mapserver/bin/mapserv
       working_dir: ./mapdata/tmp
     supported_srs: ['EPSG:4326']
-  ketan_source:
-      type: mapserver
-      req:
-        layers: petaindo
-        map: ./mapdata/mapfile/bdg.map
-        transparent: true
-      coverage:
-        bbox: [107.539814, -6.964109, 107.745121, -6.834932]
-        srs: 'EPSG:4326'
-      mapserver:
-        binary: /usr/lib/cgi-bin/mapserv
-        working_dir: ./mapdata/tmp
-      supported_srs: ['EPSG:4326']
 grids:
     ragi:
         base: GLOBAL_WEBMERCATOR
