@@ -69,7 +69,7 @@ sources:
       srs: 'EPSG:4326'
     mapserver:
       #for ubuntu 
-      binary: /usr/lib/cgi-bin/mapserv
+      #binary: /usr/lib/cgi-bin/mapserv
       #for mac os install via homebrew
       binary: /usr/local/opt/mapserver/bin/mapserv
       working_dir: ./mapdata/tmp
