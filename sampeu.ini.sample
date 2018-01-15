@@ -1,6 +1,6 @@
 [uwsgi]
 pcre = True
-http = 0.0.0.0:8080
+http = 0.0.0.0:5473
 module = sampeu:application
 threads = 2
 master = true

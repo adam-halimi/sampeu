@@ -1,2 +1,2 @@
 #!/bin/bash
-nohup uwsgi sampeu.ini &
+uwsgi sampeu.ini
