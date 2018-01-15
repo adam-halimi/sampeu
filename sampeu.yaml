@@ -62,10 +62,12 @@ sources:
       bbox: [94.5011475, -11.007385, 141.01947, 6.076721]
       srs: 'EPSG:4326'
     mapserver:
-      # for ubuntu 
+      # for ubuntu install via apt-get install cgi-mapserver
       # binary: /usr/lib/cgi-bin/mapserv
+      # for mac os install via pip
+      binary : /Library/WebServer/CGI-Executables/mapserv
       # for mac os install via homebrew
-      binary: /usr/local/opt/mapserver/bin/mapserv
+      # binary: /usr/local/opt/mapserver/bin/mapserv
       working_dir: ./mapdata/tmp
     supported_srs: ['EPSG:4326']
 grids:
